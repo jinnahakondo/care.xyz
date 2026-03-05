@@ -17,7 +17,7 @@ export default function Navbar() {
     </>
   );
   return (
-    <div className="bg-base-100 shadow-sm">
+    <div className="bg-base-100 border-b border-base-300">
       <div className="flex justify-between items-center-safe max-w-7xl mx-auto py-5">
         {/* logo */}
         <Link href={"/"} className="btn btn-ghost text-xl">
