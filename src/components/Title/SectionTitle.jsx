@@ -2,7 +2,7 @@ import React from "react";
 
 export default function SectionTitle({ children, sub_title }) {
   return (
-    <div>
+    <div className="mb-12">
       <h2 className="font-extrabold text-2xl lg:text-4xl text-center text-neutral">
         {children}
       </h2>
