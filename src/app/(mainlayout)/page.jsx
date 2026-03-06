@@ -1,6 +1,7 @@
 import HeroSection from "@/components/home/HeroSection";
-import HowItWorks from "@/components/home/HowItWorks";
-import OurServices from "@/components/home/OurServices";
+import HowItWorksSection from "@/components/home/HowItWorksSection";
+import OurServices from "@/components/home/OurServicesSection";
+import TrustedSection from "@/components/home/TrustedSection";
 import Image from "next/image";
 
 export default function Home() {
@@ -8,7 +9,8 @@ export default function Home() {
     <div>
       <HeroSection />
       <OurServices />
-      <HowItWorks />
+      <HowItWorksSection />
+      <TrustedSection />
     </div>
   );
 }

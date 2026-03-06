@@ -2,7 +2,7 @@ import React from "react";
 import SectionTitle from "../Title/SectionTitle";
 import ServiceCard from "../cards/ServiceCard";
 
-export default function OurServices() {
+export default function OurServicesSection() {
   const services = [
     {
       _id: 1,
