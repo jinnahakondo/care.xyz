@@ -7,6 +7,8 @@ import { MdVerifiedUser } from "react-icons/md";
 import { FaRegSmile } from "react-icons/fa";
 
 export default function HowItWorks() {
+
+  // Data for how the service works
   const howItWorks = [
     {
       icon: AiOutlineSearch,
@@ -33,9 +35,13 @@ export default function HowItWorks() {
         "All caregivers are background-checked and verified to ensure safety and trust.",
     },
   ];
+
   return (
+    // Section wrapper
     <div className="bg-base-200 py-20">
       <div className="max-w-7xl mx-auto">
+
+        {/* Section heading */}
         <SectionTitle
           sub_title={
             "Getting the right care for your family is simple, secure, and stress-free."
@@ -43,15 +49,23 @@ export default function HowItWorks() {
         >
           How it Works
         </SectionTitle>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 ">
+
+        {/* Steps grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          {/* Step cards */}
           {howItWorks.map((data, i) => (
             <div
               key={i}
               className="bg-base-100 rounded-2xl p-8 flex flex-col gap-6 items-center"
             >
+              
+              {/* Icon */}
               <span className="p-4 rounded-full bg-base-200 text-primary">
                 <data.icon size={24} />
               </span>
+
+              {/* Text content */}
               <div>
                 <h4 className="text-xl text-neutral font-bold mb-1 text-center">
                   {data.title}
@@ -60,6 +74,7 @@ export default function HowItWorks() {
                   {data.description}
                 </p>
               </div>
+
             </div>
           ))}
         </div>
