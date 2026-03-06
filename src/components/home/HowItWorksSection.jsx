@@ -37,7 +37,7 @@ export default function HowItWorksSection() {
 
   return (
     // Section wrapper
-    <div className="bg-base-200 py-20">
+    <div className="bg-base-200 py-20 px-2">
       <div className="max-w-7xl mx-auto">
         {/* Section heading */}
         <SectionTitle

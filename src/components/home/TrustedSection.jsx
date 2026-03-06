@@ -36,7 +36,7 @@ export default function TrustedSection() {
     },
   ];
   return (
-    <div className="py-20 max-w-7xl mx-auto">
+    <div className="py-20 px-2 max-w-7xl mx-auto">
       <SectionTitle>Trusted by thousands of happy families</SectionTitle>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {testimonials.map((testimonial, i) => (
