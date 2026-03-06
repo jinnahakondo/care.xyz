@@ -5,7 +5,7 @@ export default function HeroSection() {
   return (
     // Hero section wrapper
     <section className="bg-base-200">
-      <div className="max-w-7xl mx-auto px-4 py-20 flex flex-col lg:flex-row items-center justify-between gap-12">
+      <div className="max-w-7xl mx-auto px-4 py-20 flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
         {/* Left side content */}
         <div>
           {/* Top badge */}
