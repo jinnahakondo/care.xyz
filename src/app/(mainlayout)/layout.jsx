@@ -8,7 +8,7 @@ export default function layout({ children }) {
       <header>
         <Navbar />
       </header>
-      <main>{children}</main>
+      <main className="min-h-[calc(100vh-634px)]">{children}</main>
       <footer>
         <Footer />
       </footer>

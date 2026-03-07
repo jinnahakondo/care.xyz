@@ -1,6 +1,6 @@
 import React from "react";
 import SectionTitle from "../Title/SectionTitle";
-import ServiceCard from "../cards/ServiceCard";
+import OverViewServiceCard from "../cards/OverViewServiceCard";
 
 export default function OurServicesSection() {
   const services = [
@@ -38,7 +38,7 @@ export default function OurServicesSection() {
       <SectionTitle>Our Care Services</SectionTitle>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {services.map((service) => (
-          <ServiceCard key={service._id} {...service} />
+          <OverViewServiceCard key={service._id} {...service} />
         ))}
       </div>
     </div>

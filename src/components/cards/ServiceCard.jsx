@@ -1,35 +1,38 @@
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
-import { FaArrowRightLong } from "react-icons/fa6";
+import { CiStar } from "react-icons/ci";
 
-export default function ServiceCard({ image, title, description }) {
+export default function ServiceCard({ image, description }) {
   return (
-    <div className="bg-base-200 p-4 rounded-2xl h-full flex flex-col group ">
-      {/* card image  */}
-      <div className="h-48 w-full overflow-hidden rounded-2xl">
+    <div className="card bg-base-100 border-base-300 shadow-sm rounded-2xl overflow-hidden">
+      <figure className="h-48">
         <Image
           src={image}
-          alt={title}
           width={200}
           height={200}
-          className="h-full w-full object-cover  transition duration-300 group-hover:scale-110 "
+          alt={""}
+          className="w-full h-full object-cover"
         />
-      </div>
-      <div className="mt-4 flex flex-col flex-1">
-        {/* card title  */}
-        <h4 className="text-xl font-bold text-neutral mb-1">{title}</h4>
-        {/* card description  */}
-        <p className="text-xs text-base-content mb-4 line-clamp-2">
-          {description}
-        </p>
-        {/* link  */}
-        <Link
-          href={"/"}
-          className="text-primary text-xs font-medium flex items-center gap-2 mt-auto hover:gap-5 transition-[gap]"
-        >
-          Learn more <FaArrowRightLong />
-        </Link>
+      </figure>
+      <div className="card-body">
+        <div className="flex items-center justify-between ">
+          <h2 className="text-lg font-bold text-neutral">Sarah Mitchell</h2>
+          <div className="flex items-center gap-1 font-medium">
+            <span className="text-[#EAB308]">
+              <CiStar size={22} />
+            </span>
+            <span className="text-neutral ">4.7</span>
+          </div>
+        </div>
+        <p className="text-base-content text-sm line-clamp-2">{description}</p>
+        {/* divider  */}
+        <div className="divider opacity-40"></div>
+        {/* price & buttons */}
+        <div className="flex items-center justify-between">
+          {/* price */}
+          <p className="text-2xl font-bold text-primary">$24</p>
+          <button className="btn btn-neutral rounded-2xl">View Details</button>
+        </div>
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ import { FiGlobe } from "react-icons/fi";
 
 export default function Footer() {
   return (
-    <footer className="bg-neutral text-neutral-content text-sm">
+    <footer className="bg-neutral text-neutral-content text-sm ">
       {/* footer main container */}
       <div className="max-w-7xl mx-auto py-20 px-6 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
         {/* brand section */}
@@ -36,7 +36,7 @@ export default function Footer() {
         <div>
           <h6 className="footer-title text-lg ">Services</h6>
 
-          <ul className="space-y-2">
+          <ul className="space-y-2 opacity-70">
             <li>
               <Link href="/babysitting" className="link link-hover">
                 Babysitting
@@ -69,7 +69,7 @@ export default function Footer() {
         <div>
           <h6 className="footer-title text-lg">Company</h6>
 
-          <ul className="space-y-2">
+          <ul className="space-y-2 opacity-70">
             <li>
               <Link href="/about" className="link link-hover">
                 About Us
