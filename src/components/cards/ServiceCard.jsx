@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { CiStar } from "react-icons/ci";
 
-export default function ServiceCard({ image, description }) {
+export default function ServiceCard({ image, description, _id }) {
   return (
     <div className="card bg-base-100 border-base-300 shadow-sm rounded-2xl overflow-hidden group">
       <figure className="h-48">
@@ -32,7 +32,10 @@ export default function ServiceCard({ image, description }) {
         <div className="flex items-center justify-between">
           {/* price */}
           <p className="text-2xl font-bold text-primary">$24</p>
-          <Link href={"/"} className="btn btn-neutral rounded-2xl">
+          <Link
+            href={`/service/${_id}`}
+            className="btn btn-neutral rounded-2xl"
+          >
             View Details
           </Link>
         </div>
