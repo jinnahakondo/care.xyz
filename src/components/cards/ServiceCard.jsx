@@ -1,17 +1,18 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { CiStar } from "react-icons/ci";
 
 export default function ServiceCard({ image, description }) {
   return (
-    <div className="card bg-base-100 border-base-300 shadow-sm rounded-2xl overflow-hidden">
+    <div className="card bg-base-100 border-base-300 shadow-sm rounded-2xl overflow-hidden group">
       <figure className="h-48">
         <Image
           src={image}
           width={200}
           height={200}
           alt={""}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover group-hover:scale-110 duration-300 transition-all"
         />
       </figure>
       <div className="card-body">
@@ -31,7 +32,9 @@ export default function ServiceCard({ image, description }) {
         <div className="flex items-center justify-between">
           {/* price */}
           <p className="text-2xl font-bold text-primary">$24</p>
-          <button className="btn btn-neutral rounded-2xl">View Details</button>
+          <Link href={"/"} className="btn btn-neutral rounded-2xl">
+            View Details
+          </Link>
         </div>
       </div>
     </div>
