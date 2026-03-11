@@ -1,6 +1,10 @@
+"use client";
+
+import { useRouter } from "next/navigation";
 import { FiArrowRight } from "react-icons/fi";
 
 export default function ServicePriceCard() {
+  const router = useRouter();
   return (
     // Main card container
     <div className=" rounded-2xl bg-base-100 shadow-md  p-6">
@@ -40,7 +44,10 @@ export default function ServicePriceCard() {
       </div>
 
       {/* Booking button */}
-      <button className="btn btn-primary w-full mt-6 rounded-xl text-white flex items-center justify-center gap-2">
+      <button
+        onClick={() => router.push(`/booking`)}
+        className="btn btn-primary w-full mt-6 rounded-xl text-white flex items-center justify-center gap-2"
+      >
         Book Service
         <FiArrowRight size={18} />
       </button>
