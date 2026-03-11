@@ -1,10 +1,5 @@
 import { FiArrowRight } from "react-icons/fi";
 
-/**
- * ServiceCard Component
- * This component displays service pricing information
- * and a booking button similar to the provided design.
- */
 export default function ServicePriceCard() {
   return (
     // Main card container
