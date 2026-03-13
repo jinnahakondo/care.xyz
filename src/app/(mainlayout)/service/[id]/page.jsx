@@ -5,9 +5,16 @@ import Link from "next/link";
 import React from "react";
 import { CiStar } from "react-icons/ci";
 
+const getService = async (id) => {
+  const res = await fetch(`http://localhost:3000/api/servicen/${id}`);
+  const data = await res.json();
+  return data.service;
+};
 export default async function ServiceDetails({ params }) {
   // get service id from route params
   const { id } = await params;
+  const service = await getService(id);
+  console.log(service);
 
   return (
     <div className="max-w-7xl mx-auto pt-8 px-2">

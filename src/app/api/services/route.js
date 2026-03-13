@@ -7,6 +7,6 @@ export async function GET(request) {
         const services = await ServiceModel.find();
         return Response.json({ services }, { status: 200 });
     } catch {
-        Response.json({ error: "Failed to fetch services" }, { status: 500 });
+        return Response.json({ error: "Failed to fetch services" }, { status: 500 });
     }
 }

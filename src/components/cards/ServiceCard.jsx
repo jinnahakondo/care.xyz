@@ -17,7 +17,6 @@ export default function ServiceCard({ service }) {
   const { _id, title, category, pricePerHour, rating, description, image } =
     service;
 
-
   return (
     // Main service card container
     <div className="card bg-base-100 border-base-300 shadow-sm rounded-2xl overflow-hidden group">
@@ -67,7 +66,8 @@ export default function ServiceCard({ service }) {
         <div className="flex items-center justify-between">
           {/* Price */}
           <p className="text-2xl font-bold text-primary flex items-center gap-1">
-            <FaBangladeshiTakaSign /> {pricePerHour}
+            <FaBangladeshiTakaSign /> {pricePerHour}{" "}
+            <span className="text-base-content/60 text-xs">/hr</span>
           </p>
 
           {/* Navigate to service details page */}
