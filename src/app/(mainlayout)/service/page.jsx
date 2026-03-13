@@ -1,13 +1,16 @@
 import ServiceCard from "@/components/cards/ServiceCard";
 import FilterSidebar from "@/components/FilterSidebar";
 import ServicesHeaderSection from "@/components/services/ServicesHeaderSection";
-import connectDB from "@/lib/db";
-import ServiceModel from "@/models/ServiceModel";
+
+const getServices = async () => {
+  const res = await fetch("http://localhost:3000/api/services");
+  const data = await res.json();
+  return data.services;
+};
 
 export default async function Services() {
-  await connectDB();
-  const serviceData = await ServiceModel.find();
-console.log(serviceData)
+  // all serviecs data
+  const serviceData = await getServices();
   return (
     <div className="py-8 bg-base-200 px-2">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
