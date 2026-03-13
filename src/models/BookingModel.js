@@ -15,5 +15,5 @@ const bookingSchema = new mongoose.Schema({
     bookingDate: { type: Date, required: true },
     createdAt: { type: Date, default: Date.now },
 });
-const Booking = mongoose.models.Booking || mongoose.model("Booking", bookingSchema);
-export default Booking;
+const BookingModel = mongoose.models.Booking || mongoose.model("Booking", bookingSchema);
+export default BookingModel;

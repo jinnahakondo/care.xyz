@@ -11,6 +11,6 @@ const serviceModel = mongoose.Schema({
     rating: { type: Number, default: 0 },
 }, { timestamps: true });
 
-const Service = mongoose.models.Service || mongoose.model("Service", serviceModel);
+const ServiceModel = mongoose.models.Service || mongoose.model("Service", serviceModel);
 
-export default Service;
+export default ServiceModel;
